@@ -6,7 +6,7 @@ import NewPost from './NewPost';
 import { useSelector } from 'react-redux';
 import { BASE_PROFILE_IMAGE_URL } from '../../utils/constants';
 import SearchBox from './SearchBar/SearchBox';
-import { ClickAwayListener } from '@mui/material';
+import { ClickAwayListener, Hidden } from '@mui/material';
 
 const Header = () => {
 
@@ -25,12 +25,14 @@ const Header = () => {
     }, [location]);
 
     return (
-        <nav className="fixed top-0 w-full border-b bg-white z-10">
+        <nav className="fixed top-0 w-full border-b bg-white z-10" >
             {/* <!-- navbar container --> */}
             <div className="flex flex-row justify-between items-center py-2 px-3.5 sm:w-full sm:py-2 sm:px-4 md:w-full md:py-2 md:px-6 xl:w-4/6 xl:py-3 xl:px-8 mx-auto">
 
                 {/* <!-- logo --> */}
-                <Link to="/"><img draggable="false" className="mt-1.5 w-full h-full object-contain" src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png" alt="" /></Link>
+                <div style={{ height: '60px' }}>
+                    <Link to="/"><img draggable="false" class="mt-1.5 w-full h-full object-contain" src="https://cdn.ajnavidya.com/ajnavidya/logo%20(1).png" alt="" /></Link>
+                </div>
 
                 <SearchBox />
 

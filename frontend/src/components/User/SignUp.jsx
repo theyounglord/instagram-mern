@@ -89,7 +89,9 @@ const SignUp = () => {
             {loading && <BackdropLoader />}
             <Auth>
                 <div className="bg-white border flex flex-col gap-2 p-4 pt-10">
-                    <img draggable="false" className="mx-auto h-30 w-36 object-contain" src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png" alt="" />
+                    <div style={{ height: '60px' }}>
+                    <img draggable="false" className="mx-auto h-30 w-36 object-contain" src="https://cdn.ajnavidya.com/ajnavidya/logo%20(1).png" alt="" />
+                    </div>
                     <form
                         onSubmit={handleRegister}
                         encType="multipart/form-data"
